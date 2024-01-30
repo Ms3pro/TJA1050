@@ -6,13 +6,16 @@ Repository for an ESP32 based CAN bus powered dashboard. Originally developed fo
 1. Install Arduino IDE (version 2.x is more straightforward)
 2. Open the `.ino` file in Arduino IDE
 3. Go to File/Preferences and set Sketchbook location to the path of this project (...to where this README is located)
-4. Install drivers for ESP32 by Espressif Systems
-5. Plug ESP32 into serial port. If the ESP32 is not detected, you may need to install VCP drivers on your system first from here: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads
-6. Select it's serial port and assign as an ESP32 Dev Module
-7. Upload project... let it compile
-8. Once Output displays "Connecting....." hold the BOOT button on the ESP32
-9. Wait for the upload to complete before releasing BOOT button
-10. Reboot the device (using EN button) and it should be working
+4. In Arduino IDE, install drivers for ESP32 by Espressif Systems
+5. In Arduino IDE, install library TFT_eSPI by Bodmer
+6. Move the "User_Setup.h" file into `libraries\TFT_eSPI` (it should overwrite the existing file in there).
+7. In Arduino IDE, install library CAN by Sandeep Mistry
+8. Plug ESP32 into serial port. If the ESP32 is not detected, you may need to install VCP drivers on your system first from here: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads
+9. Select it's serial port and assign as an ESP32 Dev Module
+10. Upload project... let it compile
+11. Once Output displays "Connecting....." hold the BOOT button on the ESP32
+12. Wait for the upload to complete before releasing BOOT button
+13. Reboot the device (using EN button) and it should be working
 
 ## Building the Dashboard Unit
 

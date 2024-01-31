@@ -1,6 +1,10 @@
 # digital-dashboard
 Repository for an ESP32 based CAN bus powered dashboard. Originally developed for Wildcat Formula Racing (University of Arizona) FSAE racecar.
 
+## Regarding vehicle specific differences (or changes):
+
+The code has been setup for the current version (as of Spring 2024) of the Wildcat Formula Racing racecar. For any other vehicle applications, you must reconfigure the `can_protocol.h` and `can_protocol.h` files found in `main\src\CAN` otherwise the dashboard will not know what data is relevant or how to translate it from the CAN bus. Additionally, you may want to reconfigure the constants in `main\src\vehicle_constants.h` to reflect your car's redline, RPM range, etc.
+
 ## Get started
 
 1. Install Arduino IDE (version 2.x is more straightforward)
@@ -37,7 +41,7 @@ Pushbutton to ESP32, defined in `main/src/config.h`
 
 ## Note on using different TFT
 
-The GUI part of this project is driven solely by Bodmer's TFT_eSPI library. A pre-configured version of the library is included to mitigate configuration process if you have already chosen the same display.
+The GUI part of this project is driven solely by Bodmer's TFT_eSPI library. A pre-configured `User_Setup.h` for the library is included to mitigate configuration process if you have already chosen the same display.
 
 If you are using a different TFT display than the one in this project, make sure it is on the list of compatible drivers, found under `/libraries/TFT_eSPI/TFT_Drivers` or it may not display properly.
 

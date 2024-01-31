@@ -9,7 +9,7 @@ Repository for an ESP32 based CAN bus powered dashboard. Originally developed fo
 4. In Arduino IDE, install drivers for ESP32 by Espressif Systems
 5. In Arduino IDE, install library TFT_eSPI by Bodmer (v2.5.34)
 6. In Arduino IDE, install library CAN by Sandeep Mistry (v0.3.1)
-7. If using different display, [see reconfiguration steps](https://github.com/Sneupi/digital-dashboard/edit/main/README.md#Configuring-different-TFT-display)
+7. If using different display, see reconfiguration for TFT below
 8. Move the `"User_Setup.h` file into `libraries\TFT_eSPI` (should overwrite existing file).
 9. Plug ESP32 to computer. If not detected, you may need to install [VCP drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads) on your PC first.
 10. In Arduino IDE, select it's COM port and set as "ESP32 Dev Module"

@@ -12,8 +12,8 @@ The code has been setup for the current version (as of Spring 2024) of the Wildc
 3. Go to File/Preferences and set Sketchbook location to the path of this project (...to where this README is located)
 4. In Arduino IDE, install drivers for ESP32 by Espressif Systems
 5. In Arduino IDE, install library TFT_eSPI by Bodmer
-6. Move the "User_Setup.h" file into `libraries\TFT_eSPI` (it should overwrite the existing file in there).
-7. In Arduino IDE, install library CAN by Sandeep Mistry
+6. In Arduino IDE, install library CAN by Sandeep Mistry
+7. Move the "User_Setup.h" file into `libraries\TFT_eSPI` (it should overwrite the existing file in there).
 8. Plug ESP32 into serial port. If the ESP32 is not detected, you may need to install VCP drivers on your system first from here: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads
 9. Select it's serial port and assign as an ESP32 Dev Module
 10. Upload project... let it compile

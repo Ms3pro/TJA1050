@@ -3,7 +3,7 @@ Repository for an ESP32 based CAN bus powered dashboard. Originally developed fo
 
 ## Regarding vehicle-specific differences:
 
-The code has been setup for the current version (as of Spring 2024) of the Wildcat Formula Racing racecar. For any other vehicle applications, you must reconfigure the `can_protocol.h` and `can_protocol.h` files found in `main\src\CAN` otherwise the dashboard will not know what data is relevant or how to translate it from the CAN bus. Additionally, you may want to reconfigure the constants in `main\src\vehicle_constants.h` to reflect your car's redline, RPM range, etc.
+The code has been setup for the current version (as of Spring 2024) of the Wildcat Formula Racing racecar. For any other vehicle applications, you must reconfigure the `can_protocol.h` and `can_protocol.cpp` files found in `main\src\CAN` otherwise the dashboard will not know what data is relevant or how to translate it from the CAN bus. Additionally, you may want to reconfigure the constants in `main\src\vehicle_constants.h` to reflect your car's redline, RPM range, etc.
 
 ## Get started
 

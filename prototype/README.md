@@ -3,7 +3,7 @@
 1. Install Arduino IDE (version 2.x is more straightforward)
 2. Open the `.ino` file in Arduino IDE
 3. Install all dependencies (see "Code Dependencies" below) inside Arduino IDE. 
-4. Place the provided `User_Setup.h` in `Documents\Arduino\libraries\TFT_eSPI` (should overwrite).
+4. Place the provided `User_Setup.h` in Arduino file directory `libraries\TFT_eSPI` (should overwrite).
 5. Connect ESP32, select its COM port, and set as "ESP32 Dev Module"
 6. Click upload.
 7. Output tab displays "Connecting....", hold BOOT button on ESP32 until upload completes.
@@ -21,7 +21,9 @@
 
 ### Connecting pinouts:
 
-[See provided image for pinouts, as well as UserSetup.h for TFT pinout]
+See `UserSetup.h` for TFT pinouts
+
+![See WFR_ProtoDashWiring.jpg for pinouts, as well as UserSetup.h for TFT pinout](https://github.com/Sneupi/digital-dashboard/blob/main/prototype/WFR_ProtoDashWiring.jpg?raw=true)
 
 # Code Dependencies:
 
@@ -29,11 +31,11 @@
 
 [ESP32 by Espressif Systems](https://github.com/espressif/arduino-esp32)
 
-### Windows Drivers: (if ESP32 not recognized)
+### Windows Drivers: (if ESP32 not detected as COM)
 
 [VCP drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-### Libraries:
+### Arduino Libraries:
 
 [TFT_eSPI by Bodmer (v2.5.34)](https://www.arduino.cc/reference/en/libraries/tft_espi/)
 
@@ -43,10 +45,10 @@
 
 Please read `TranslateCAN.h` file
 
-### Vehicle constants:
+### Readout warnings:
 
 Please read `warning_limits.h` file
 
-### Display Compatibility
+### Display Driver Compatibility
 
-The GUI part of this project is driven by Bodmer's TFT_eSPI library. If you have installed it for your Arduino IDE already, you may look through `Documents\Arduino\libraries\TFT_eSPI\TFT_Drivers` If you are changing TFT config (pinouts, driver selection, etc), it can be done in `libraries\TFT_eSPI\User_Setup.h`. Beforehand, make sure your intended display is even on the list of compatible drivers, found under `/libraries/TFT_eSPI/TFT_Drivers`.
+The GUI part of this project is driven by Bodmer's TFT_eSPI library, which provides a flexible range of display compatibility if you opt for a different display. If you have installed the library in Arduino IDE already, you may look through your Arduino libraries `libraries\TFT_eSPI\TFT_Drivers` to see the list of compatible drivers. Additionally, if you are changing TFT config for your new display (pinouts, driver selection, etc), it can be done in `libraries\TFT_eSPI\User_Setup.h`.
